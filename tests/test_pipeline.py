@@ -1,6 +1,6 @@
 from __future__ import absolute_import
 
-from ..pypeline.pipeline import Pipeline
+from ..pypeline import Pipeline
 
 
 class PipeTest:
