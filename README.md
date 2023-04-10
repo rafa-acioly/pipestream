@@ -37,6 +37,35 @@ Of course, as discussed previously, you are not limited to providing functions t
 from pipestream import Pipeline
 
 
+class GenerateProfilePhoto:
+    def handle(value, next):
+        # do stuff
+        return next(value)
+
+class ActivateSubscription:
+    def handle(value, next):
+        # do stuff
+        return next(value)
+
+class SendWelcomeEmail:
+    def handle(value, next):
+        # do stuff
+        return next(value)
+
+
+user = Pipeline
+    .send(user)
+    .through(
+        GenerateProfilePhoto,
+        ActivateSubscription,
+        SendWelcomeEmail
+    )
+    .then_return()
+```
+
+By default the Pipeline will try to call the method `handle` on each class, if you want to change this method you can set it through `.via()`, you can also set a new destination for the final value with `.then()`
+
+```python
 user = Pipeline
     .send(user)
     .through(
@@ -45,8 +74,9 @@ user = Pipeline
         SendWelcomeEmail
     )
     .via('do')
-    .then(lambda value: value)
+    .then(print)
 ```
+
 
 ## Install
 ```sh
