@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "pypeline"
 version = "1.0.0"
 authors = [
-  { name=Rafael Acioly", email="aciolyr@gmail.com" },
+  { name="Rafael Acioly", email="aciolyr@gmail.com" },
 ]
 description = "An utility class that provides a convenient way to 'pipe' a given input through a series of classes or callables"
 readme = "README.md"
