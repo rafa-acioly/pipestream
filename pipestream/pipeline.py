@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import inspect
 from functools import reduce
-from typing import Tuple, Type, TypeVar
+from typing import Tuple, Type
 
 
 class Pipeline:
@@ -37,7 +37,8 @@ class Pipeline:
 
     def then(self, destination: callable) -> any:
         """Run the pipeline with a final destination callback."""
-        pipeline = reduce(self._carry(), self.pipes, self._prepare_destination(destination))
+        pipeline = reduce(self._carry(), self.pipes,
+                          self._prepare_destination(destination))
         return pipeline(self._passable)
 
     def then_return(self) -> any:

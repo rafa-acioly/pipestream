@@ -3,12 +3,12 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pypeline"
+name = "pipestream"
 version = "1.0.0"
 authors = [
   { name="Rafael Acioly", email="aciolyr@gmail.com" },
 ]
-description = "An utility class that provides a convenient way to 'pipe' a given input through a series of classes or callables"
+description = "A convenient way to 'pipe' a given input through a series of classes or callables"
 readme = "README.md"
 requires-python = ">=3.10"
 classifiers = [

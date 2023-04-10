@@ -1,11 +1,11 @@
-# Pypeline
+# Pipestream
 
 ## Usage
 
-Pypeline provides a convenient way to "pipe" a given input through a series of classes or callable, giving each class the opportunity to inspect or modify the input and invoke the next callable in the pipeline:
+Pipestream provides a convenient way to "pipe" a given input through a series of classes or callable, giving each class the opportunity to inspect or modify the input and invoke the next callable in the pipeline:
 
 ```python
-from pypeline import Pipeline
+from pipestream import Pipeline
 
 
 def sum_one(value, next):
@@ -34,7 +34,7 @@ When the last callable in the pipeline invokes the `next` closure, the callable 
 Of course, as discussed previously, you are not limited to providing functions to your pipeline. You may also provide classes with common method's between them. If a class is provided, the class method will be accessed by python std method `getattr`.
 
 ```python
-from pypeline import Pipeline
+from pipestream import Pipeline
 
 
 user = Pipeline
@@ -50,7 +50,7 @@ user = Pipeline
 
 ## Install
 ```sh
-$ pip install pypeline
+$ pip install pipestream
  ```
 
 ## Running tests
