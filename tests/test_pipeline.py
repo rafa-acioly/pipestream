@@ -30,8 +30,8 @@ class TestPipeline:
     
     def test_can_run_pipes_then_call_destination(self):
         sum_plus_one = lambda value, next: next(value + 1)
-        multily_by_two = lambda value: value * 2
+        multiply_by_two = lambda value: value * 2
 
-        pipe = Pipeline.send(1).through(sum_plus_one).then(multily_by_two)
+        pipe = Pipeline.send(1).through(sum_plus_one).then(multiply_by_two)
 
         assert pipe == 4

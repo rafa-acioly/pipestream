@@ -1,7 +1,8 @@
 from __future__ import annotations
-from typing import Type, TypeVar, Tuple
-from functools import reduce
+
 import inspect
+from functools import reduce
+from typing import Tuple, Type, TypeVar
 
 
 class Pipeline:
@@ -12,7 +13,7 @@ class Pipeline:
     # The object being passed through the pipeline.
     _passable: any
 
-    # The method to call on each pipe if a class instance if pased as pipe
+    # The method to call on each pipe if a class instance if passed as pipe
     _method: str
 
     def __init__(self, passable: any, method: str = 'handle'):
