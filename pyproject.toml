@@ -16,6 +16,7 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+keywords = ["pipeline", "middleware"]
 
 [project.urls]
 "Homepage" = "https://github.com/rafa-acioly/pypeline"
